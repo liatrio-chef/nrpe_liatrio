@@ -1,1 +1,1 @@
-default['nrpe']['install_method'] = 'source'
+default['nrpe']['install_method'] = 'package'
