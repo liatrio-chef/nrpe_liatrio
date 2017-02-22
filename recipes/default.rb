@@ -14,8 +14,8 @@ nrpe_check 'check_load' do
 end
 
 nrpe_check 'check_disk' do
-  command "#{node['nrpe']['plugin_dir']}/check_load"
-  warning_condition '10'
-  critical_condition '5'
+  command "#{node['nrpe']['plugin_dir']}/check_disk"
+  warning_condition '10%'
+  critical_condition '5%'
   action :add
 end
