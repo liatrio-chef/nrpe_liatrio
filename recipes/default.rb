@@ -23,3 +23,7 @@ nrpe_check 'check_disk' do
   critical_condition '5%'
   action :add
 end
+
+service 'nrpe' do
+  action :restart
+end
