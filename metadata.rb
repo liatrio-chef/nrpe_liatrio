@@ -4,6 +4,6 @@ maintainer_email 'you@example.com'
 license 'all_rights'
 description 'Installs/Configures nrpe_liatrio'
 long_description 'Installs/Configures nrpe_liatrio'
-version '0.1.7'
+version '0.1.9'
 
 depends 'nrpe', '~> 1.6.4'
