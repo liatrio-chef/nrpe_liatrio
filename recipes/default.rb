@@ -10,7 +10,6 @@ execute 'disable_selinux' do
   command 'setenforce 0'
 end
 
-
 nrpe_check 'check_load' do
   command "#{node['nrpe']['plugin_dir']}/check_load"
   warning_condition '10'
