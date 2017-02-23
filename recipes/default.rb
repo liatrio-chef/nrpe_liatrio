@@ -14,6 +14,14 @@ include_recipe 'yum-epel'
 package 'nagios-plugins-all'
 package 'nagios-plugins-nrpe'
 
+remote_file "#{node['nrpe']['plugin_dir']}/check_mem}" do
+  source 'https://raw.githubusercontent.com/justintime/nagios-plugins/master/check_mem/check_mem.pl'
+  owner 'root'
+  group 'root'
+  mode '755'
+  action :create
+end
+
 nrpe_check 'check_load' do
   command "#{node['nrpe']['plugin_dir']}/check_load"
   warning_condition '10'
